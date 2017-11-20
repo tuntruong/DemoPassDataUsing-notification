@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oc2-vp-lMm">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Number-->
+        <scene sceneID="fqp-Tw-NUN">
+            <objects>
+                <tableViewController id="oc2-vp-lMm" customClass="TableViewController" customModule="DemoPassDataOtherWay" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Tur-iQ-lJN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="qDO-QU-SlM">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qDO-QU-SlM" id="QGr-hq-yEj">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="77d-YU-Q29" kind="show" id="Hiz-aO-JyS"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="oc2-vp-lMm" id="tmq-bu-szw"/>
+                            <outlet property="delegate" destination="oc2-vp-lMm" id="4OO-yh-fLs"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Number" id="HXx-4k-tlC">
+                        <barButtonItem key="backBarButtonItem" title=" " id="Muf-to-tzw"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dk2-kO-qFo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-164" y="107"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="pSc-aS-0fP">
+            <objects>
+                <viewController id="77d-YU-Q29" customClass="ViewController" customModule="DemoPassDataOtherWay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HRc-HO-RNo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBl-S2-hre">
+                                <rect key="frame" x="112.5" y="268.5" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="7cM-Nc-2ID"/>
+                                    <constraint firstAttribute="width" constant="150" id="Z96-hF-6XA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KBl-S2-hre" firstAttribute="centerX" secondItem="ZyU-1L-NeP" secondAttribute="centerX" id="ZXg-T6-BUy"/>
+                            <constraint firstItem="KBl-S2-hre" firstAttribute="centerY" secondItem="ZyU-1L-NeP" secondAttribute="centerY" id="kzn-7U-5hl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZyU-1L-NeP"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="9AH-UV-SJe"/>
+                    <connections>
+                        <outlet property="label" destination="KBl-S2-hre" id="3lp-Lx-fz1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k1T-jA-ChX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="575.20000000000005" y="106.59670164917542"/>
+        </scene>
+    </scenes>
+</document>
